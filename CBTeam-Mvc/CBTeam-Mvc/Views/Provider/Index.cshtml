@@ -1,0 +1,38 @@
+﻿@model List<CBTeam_Mvc.Models.ProviderModel>;
+@{
+}
+
+<h2>Empresas Mayoristas</h2>
+<div class="form-group">
+    @using (Html.BeginForm("SearchByName", "Provider", FormMethod.Get))
+    {
+        <input type="text" id="searchInput" name="Nombre" />
+        <button type="submit">Buscar</button>
+    }
+</div>
+
+<button id="showProviderListButton">Mostrar Lista</button>
+
+<div id="providerList" style="display: none;">
+    <ul> 
+    @foreach (var provider in Model)
+    {
+      <li>@provider.Id - @provider.ProviderName - @provider.Locality</li>
+    }
+    </ul>
+</div>
+
+<script>
+    document.getElementById("showProviderListButton").addEventListener("click", function () {
+        var providerList = document.getElementById("providerList");
+        if (providerList.style.display === "none") {
+            providerList.style.display = "block";
+        } else {
+            providerList.style.display = "none";
+        }
+    });
+</script>
+
+
+
+
