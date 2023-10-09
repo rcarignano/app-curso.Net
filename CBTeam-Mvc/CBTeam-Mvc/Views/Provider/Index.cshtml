@@ -7,32 +7,100 @@
     @using (Html.BeginForm("SearchByName", "Provider", FormMethod.Get))
     {
         <input type="text" id="searchInput" name="Nombre" />
+        <div id="sugerencia"></div>
         <button type="submit">Buscar</button>
     }
 </div>
-
 <button id="showProviderListButton">Mostrar Lista</button>
 
 <div id="providerList" style="display: none;">
-    <ul> 
-    @foreach (var provider in Model)
-    {
-      <li>@provider.Id - @provider.ProviderName - @provider.Locality</li>
-    }
+    <ul>
+        @foreach (var provider in Model)
+        {
+            <li>@provider.Id - @provider.ProviderName - @provider.Locality</li>
+        }
     </ul>
 </div>
 
+@using (Html.BeginForm("GetAddressByName", "Provider", FormMethod.Get))
+{
+    <input type="text" id="searchInputAddress" name="searchName" />
+    <div id="sugerenciaAddress"></div>
+    <button type="submit">Buscar</button>
+}
+
+<div id="direccionContainer" style="display: none;"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    document.getElementById("showProviderListButton").addEventListener("click", function () {
-        var providerList = document.getElementById("providerList");
-        if (providerList.style.display === "none") {
-            providerList.style.display = "block";
-        } else {
-            providerList.style.display = "none";
-        }
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("showProviderListButton").addEventListener("click", function () {
+            var providerList = document.getElementById("providerList");
+            if (providerList.style.display === "none" || providerList.style.display === "") {
+                providerList.style.display = "block";
+            } else {
+                providerList.style.display = "none";
+            }
+        });
+
+        var searchInput = document.getElementById("searchInput");
+        var sugerencia = document.getElementById("sugerencia");
+
+        searchInput.addEventListener("input", function () {
+            var inputValue = searchInput.value.trim();
+
+            if (inputValue.length >= 3) {
+                $.ajax({
+                    url: "/Provider/SearchByName",
+                    type: "GET",
+                    data: { Nombre: inputValue },
+                    success: function (data) {
+                        sugerencia.innerHTML = "";
+
+                        data.forEach(function (provider) {
+                            var divSugerencia = document.createElement("div");
+                            divSugerencia.textContent = provider.ProviderName;
+
+                            divSugerencia.addEventListener("click", function () {
+                                searchInput.value = provider.ProviderName;
+                                sugerencia.innerHTML = "";
+                            });
+
+                            sugerencia.appendChild(divSugerencia);
+                        });
+                    }
+                });
+            } else {
+                sugerencia.innerHTML = "";
+            }
+        });
+     
+       
+        var searchInputAddress = document.getElementById("searchInputAddress");
+        var sugerenciaAddress = document.getElementById("sugerenciaAddress");
+
+        searchInputAddress.addEventListener("input", function () {
+            var inputValue = searchInputAddress.value.trim();
+
+                $.ajax({
+                    url: "/Provider/GetAddressByName",
+                    type: "GET",
+                    data: { searchName: inputValue }, 
+                    success: function (addresses) {
+                        var direccionContainer = document.getElementById("direccionContainer");
+                        direccionContainer.innerHTML = "";
+                        var direccionUl = document.createElement("ul");
+
+                        addresses.forEach(function (address) {
+                            var direccionLi = document.createElement("li");
+                            direccionLi.textContent = address.AddressName + " " + address.AddressNumber;
+                            direccionUl.appendChild(direccionLi);
+                        });
+
+                        direccionContainer.appendChild(direccionUl);
+                        direccionContainer.style.display = "block";
+                    },
+                });           
+        });
     });
 </script>
-
-
-
-
