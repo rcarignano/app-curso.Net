@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CzPXOgePQdRRYEnyFkeSmwkLipykmjL4mqX7yJ7NQ2gAnW3nCJtizNzoKxQ/6+ZFczkT1DrEgJsMBAGJT5OKlA==",
+  "dgSpecHash": "+dZlX2m1kmtY5FGlAds29MsolYrqDQRiMcbK+rtlFxFkdexdZEs5+nSewkzR2aEFyp7WL6veUBL9/Q9zAewKuw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\Desktop\\Sabado\\Curso.Net\\CBTeam-Mvc\\CBTeam-Mvc\\CBTeam-Mvc.csproj",
+  "projectFilePath": "C:\\Users\\USUARIO\\Desktop\\Sabado\\Curso.Net\\MVC\\CBTeam-Mvc\\CBTeam-Mvc\\CBTeam-Mvc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
