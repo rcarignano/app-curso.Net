@@ -1,0 +1,7 @@
+C:\Users\USUARIO\Desktop\Sabado\Curso.Net\CBTeam.WCFClass\CBTeam.WCFClass\bin\Debug\CBTeam.WCFClass.dll.config
+C:\Users\USUARIO\Desktop\Sabado\Curso.Net\CBTeam.WCFClass\CBTeam.WCFClass\bin\Debug\CBTeam.WCFClass.dll
+C:\Users\USUARIO\Desktop\Sabado\Curso.Net\CBTeam.WCFClass\CBTeam.WCFClass\bin\Debug\CBTeam.WCFClass.pdb
+C:\Users\USUARIO\Desktop\Sabado\Curso.Net\CBTeam.WCFClass\CBTeam.WCFClass\obj\Debug\CBTeam.WCFClass.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Desktop\Sabado\Curso.Net\CBTeam.WCFClass\CBTeam.WCFClass\obj\Debug\CBTeam.WCFClass.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\Sabado\Curso.Net\CBTeam.WCFClass\CBTeam.WCFClass\obj\Debug\CBTeam.WCFClass.dll
+C:\Users\USUARIO\Desktop\Sabado\Curso.Net\CBTeam.WCFClass\CBTeam.WCFClass\obj\Debug\CBTeam.WCFClass.pdb
