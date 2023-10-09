@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USUARIO\\Desktop\\Sabado\\Curso.Net\\CBTeam-Mvc\\CBTeam-Mvc\\CBTeam-Mvc.csproj": {}
+    "C:\\Users\\USUARIO\\Desktop\\Sabado\\Curso.Net\\MVC\\CBTeam-Mvc\\CBTeam-Mvc\\CBTeam-Mvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USUARIO\\Desktop\\Sabado\\Curso.Net\\CBTeam-Mvc\\CBTeam-Mvc\\CBTeam-Mvc.csproj": {
+    "C:\\Users\\USUARIO\\Desktop\\Sabado\\Curso.Net\\MVC\\CBTeam-Mvc\\CBTeam-Mvc\\CBTeam-Mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\Sabado\\Curso.Net\\CBTeam-Mvc\\CBTeam-Mvc\\CBTeam-Mvc.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Desktop\\Sabado\\Curso.Net\\MVC\\CBTeam-Mvc\\CBTeam-Mvc\\CBTeam-Mvc.csproj",
         "projectName": "CBTeam-Mvc",
-        "projectPath": "C:\\Users\\USUARIO\\Desktop\\Sabado\\Curso.Net\\CBTeam-Mvc\\CBTeam-Mvc\\CBTeam-Mvc.csproj",
+        "projectPath": "C:\\Users\\USUARIO\\Desktop\\Sabado\\Curso.Net\\MVC\\CBTeam-Mvc\\CBTeam-Mvc\\CBTeam-Mvc.csproj",
         "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USUARIO\\Desktop\\Sabado\\Curso.Net\\CBTeam-Mvc\\CBTeam-Mvc\\obj\\",
+        "outputPath": "C:\\Users\\USUARIO\\Desktop\\Sabado\\Curso.Net\\MVC\\CBTeam-Mvc\\CBTeam-Mvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,30 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "System.ServiceModel.Duplex": {
+              "target": "Package",
+              "version": "[4.10.*, )"
+            },
+            "System.ServiceModel.Federation": {
+              "target": "Package",
+              "version": "[4.10.*, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[4.10.*, )"
+            },
+            "System.ServiceModel.NetTcp": {
+              "target": "Package",
+              "version": "[4.10.*, )"
+            },
+            "System.ServiceModel.Security": {
+              "target": "Package",
+              "version": "[4.10.*, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.7.1, )"
             }
           },
           "imports": [
@@ -64,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

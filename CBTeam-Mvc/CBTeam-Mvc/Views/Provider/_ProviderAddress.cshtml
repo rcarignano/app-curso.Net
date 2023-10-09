@@ -1,0 +1,11 @@
+﻿@model List<CBTeam.WCFClass.Address>
+
+<h4>Dirección:</h4>
+<div id="direccionContainer">
+    <ul>
+        @foreach (var address in Model)
+        {
+            <li>@address.AddressName - @address.AddressNumber</li>
+        }
+    </ul>
+</div>
